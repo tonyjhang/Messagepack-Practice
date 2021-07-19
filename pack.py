@@ -6,7 +6,7 @@ brinary_writer = io.BytesIO()
 
 def pack(res):
     if res is None:
-        brinary_writer.write(packer.pack_null(res))
+        brinary_writer.write(packer.pack_null())
     elif isinstance(res, dict):
         brinary_writer.write(packer.pack_dict(res))
         for k,v in res.items():
